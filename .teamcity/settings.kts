@@ -36,7 +36,10 @@ project {
 object Build : BuildType({
     name = "Build"
 
-    artifactRules = ".jar => target"
+    artifactRules = """
+        target/original-plaindoll-0.0.4.jar
+        target/plaindoll-0.0.4.jar
+    """.trimIndent()
 
     vcs {
         root(DslContext.settingsRoot)
